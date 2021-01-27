@@ -3,11 +3,9 @@ from cs50 import get_int
 
 
 while True:
-    user_input = get_int("Give number from 1 to 8:")
-    if user_input > 1 and user_input < 8:
+    n = get_int("Give number from 1 to 8:")
+    if n >= 1 and n <= 8:
         break
 
-for i in range(user_input):
-    for j in range(user_input):
-        print("#", end="")
-    print()
+for i in range(1, n + 1):
+        print(" " * (n-i) + '#' * i + "  " + '#' * i)
